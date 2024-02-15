@@ -1,32 +1,48 @@
 import os
 import shutil
 
-def merge_datasets(clean_dataset_folder, noisy_dataset_folder, merged_dataset_folder):
-    os.makedirs(merged_dataset_folder, exist_ok=True)
+def merge_datasets(noisy20_train_dataset_folder, 
+                   noisy40_train_dataset_folder, 
+                   noisy60_train_dataset_folder, 
+                   merged_probability_train_dataset_folder):
+    os.makedirs(merged_probability_train_dataset_folder, exist_ok=True)
 
-    for class_folder in os.listdir(clean_dataset_folder):
-        clean_class_path = os.path.join(clean_dataset_folder, class_folder)
-        noisy_class_path = os.path.join(noisy_dataset_folder, class_folder)
-        merged_class_path = os.path.join(merged_dataset_folder, class_folder)
-        os.makedirs(merged_class_path, exist_ok=True)
+    for class_folder in os.listdir(noisy20_train_dataset_folder):
+        noisy20_class_path = os.path.join(noisy20_train_dataset_folder, class_folder)
+        noisy40_class_path = os.path.join(noisy40_train_dataset_folder, class_folder)
+        noisy60_class_path = os.path.join(noisy60_train_dataset_folder, class_folder)
 
-        # Copy clean images to merged folder
-        clean_files = os.listdir(clean_class_path)
-        for i, file_name in enumerate(clean_files):
-            clean_image_path = os.path.join(clean_class_path, file_name)
-            merged_image_path = os.path.join(merged_class_path, f'clean_{i}_{file_name}')
-            shutil.copy(clean_image_path, merged_image_path)
+        merged_dataset_folder = os.path.join(merged_probability_train_dataset_folder, class_folder)
+        os.makedirs(merged_dataset_folder, exist_ok=True)
 
-        # Copy noisy images to merged folder
-        noisy_files = os.listdir(noisy_class_path)
-        for i, file_name in enumerate(noisy_files):
-            noisy_image_path = os.path.join(noisy_class_path, file_name)
-            merged_image_path = os.path.join(merged_class_path, f'noisy_{i}_{file_name}')
-            shutil.copy(noisy_image_path, merged_image_path)
+        # Copy noisy20 images to merged folder
+        noisy20_files = os.listdir(noisy20_class_path)
+        for i, file_name in enumerate(noisy20_files):
+            noisy20_image_path = os.path.join(noisy20_class_path, file_name)
+            merged_image_path = os.path.join(merged_dataset_folder, f'noisy20_{i}_{file_name}')
+            shutil.copy(noisy20_image_path, merged_image_path)
+
+        # Copy noisy40 images to merged folder
+        noisy40_files = os.listdir(noisy40_class_path)
+        for i, file_name in enumerate(noisy40_files):
+            noisy40_image_path = os.path.join(noisy40_class_path, file_name)
+            merged_image_path = os.path.join(merged_dataset_folder, f'noisy40_{i}_{file_name}')
+            shutil.copy(noisy40_image_path, merged_image_path)
+
+        # Copy noisy60 images to merged folder
+        noisy60_files = os.listdir(noisy60_class_path)
+        for i, file_name in enumerate(noisy60_files):
+            noisy60_image_path = os.path.join(noisy60_class_path, file_name)
+            merged_image_path = os.path.join(merged_dataset_folder, f'noisy60_{i}_{file_name}')
+            shutil.copy(noisy60_image_path, merged_image_path)
 
 # Example usage
-clean_train_dataset_folder = 'clean_train_dataset'
-noisy_train_dataset_folder = 'noisy_train_dataset'
-merged_train_dataset_folder = 'train_dataset'
+noisy20_train_dataset_folder = '20_noise_train_dataset'
+noisy40_train_dataset_folder = '40_noise_train_dataset'
+noisy60_train_dataset_folder = '60_noise_train_dataset'
+merged_probability_train_dataset_folder = 'probability_train_dataset'
 
-merge_datasets(clean_train_dataset_folder, noisy_train_dataset_folder, merged_train_dataset_folder)
+merge_datasets(noisy20_train_dataset_folder, 
+               noisy40_train_dataset_folder, 
+               noisy60_train_dataset_folder, 
+               merged_probability_train_dataset_folder)

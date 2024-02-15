@@ -34,11 +34,11 @@ def process_dataset_impulse_noise(input_folder, output_folder, p, salt_intensity
             cv2.imwrite(output_path, noisy_image)
 
 # Example usage
-input_dataset_folder = 'E:\thesis_aditiApu\Rice_Image_Dataset'
-output_dataset_folder = 'E:\thesis_aditiApu\Filtered_Image_Dataset'
+input_dataset_folder = 'Rice_Image_Dataset'
+output_dataset_folder = '60_Noise_probability_dataset'
 
 # Set the probability of impulse noise (p) and salt intensity
-p = 0.02
+p = 0.6
 salt_intensity = 50
 
 process_dataset_impulse_noise(input_dataset_folder, output_dataset_folder, p, salt_intensity)

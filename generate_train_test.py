@@ -27,8 +27,8 @@ def split_dataset(input_folder, output_train_folder, output_test_folder, test_si
             shutil.copy(input_path, output_path)
 
 # Example usage
-input_dataset_folder = 'Rice_Image_Dataset'
-output_train_dataset_folder = 'clean_train_dataset'
-output_test_dataset_folder = 'clean_test_dataset'
+input_dataset_folder = '60_Noise_probability_dataset'
+output_train_dataset_folder = '60_noise_train_dataset'
+output_test_dataset_folder = '60_noise_test_dataset'
 
 split_dataset(input_dataset_folder, output_train_dataset_folder, output_test_dataset_folder, test_size=0.2)
