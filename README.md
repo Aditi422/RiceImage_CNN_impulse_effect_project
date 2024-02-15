@@ -46,8 +46,6 @@ Classification Report:
    macro avg       0.99      0.99      0.99     15000
 weighted avg       0.99      0.99      0.99     15000
 
-469/469 [==============================] - 70s 148ms/step - loss: 0.0906 - accuracy: 0.9879
-
 Performance Score:
 Loss: 0.09057945013046265, Accuracy: 0.9878666400909424
 ..................................................................................................................
@@ -72,8 +70,6 @@ Classification Report:
     accuracy                           0.99     15000
    macro avg       0.99      0.99      0.99     15000
 weighted avg       0.99      0.99      0.99     15000
-
-469/469 [==============================] - 74s 157ms/step - loss: 0.0901 - accuracy: 0.9883
 
 Performance Score:
 Loss: 0.0900530144572258, Accuracy: 0.9883333444595337
@@ -106,7 +102,6 @@ Classification Report:
    macro avg       0.99      0.99      0.99     15000
 weighted avg       0.99      0.99      0.99     15000
 
-469/469 [==============================] - 166s 354ms/step - loss: 0.1187 - accuracy: 0.9869
 
 Performance Score:
 Loss: 0.11871158331632614, Accuracy: 0.9869333505630493
@@ -136,8 +131,6 @@ Classification Report:
    macro avg       0.99      0.99      0.99     15000
 weighted avg       0.99      0.99      0.99     15000
 
-469/469 [==============================] - 172s 365ms/step - loss: 0.0944 - accuracy: 0.9880
-
 Performance Score:
 Loss: 0.09435475617647171, Accuracy: 0.9879999756813049
 
@@ -166,7 +159,6 @@ Classification Report:
    macro avg       0.99      0.99      0.99     15000
 weighted avg       0.99      0.99      0.99     15000
 
-469/469 [==============================] - 172s 367ms/step - loss: 0.0987 - accuracy: 0.9852
 
 Performance Score:
 Loss: 0.09869148582220078, Accuracy: 0.9851999878883362
